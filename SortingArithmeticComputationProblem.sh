@@ -22,3 +22,23 @@ Array[2]=${Compute[third]}
 Array[3]=${Compute[fourth]}
 
 echo "All the stored values in array that is fetched from dictionary are :" ${Array[*]}
+
+for ((i = 0; i<4; i++))
+do
+   for ((j = 0; j<4-i-1; j++))
+   do
+
+      if [ ${Array[j]} -lt ${Array[$((j+1))]} ]
+      then
+
+       temp=${Array[j]}
+       Array[$j]=${Array[$((j+1))]}
+       Array[$((j+1))]=$temp
+
+      fi
+
+   done
+
+done
+
+echo "Sorted Array is :" ${Array[*]}
