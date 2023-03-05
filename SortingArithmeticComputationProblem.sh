@@ -28,7 +28,7 @@ do
    for ((j = 0; j<4-i-1; j++))
    do
 
-      if [ ${Array[j]} -lt ${Array[$((j+1))]} ]
+      if [ ${Array[j]} -gt ${Array[$((j+1))]} ]
       then
 
        temp=${Array[j]}
