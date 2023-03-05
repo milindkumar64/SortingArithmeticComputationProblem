@@ -15,3 +15,10 @@ Compute[third]=$result3
 Compute[fourth]=$result4
 
 echo "All compute values stored inside Dictionary"
+
+Array[0]=${Compute[first]}
+Array[1]=${Compute[second]}
+Array[2]=${Compute[third]}
+Array[3]=${Compute[fourth]}
+
+echo "All the stored values in array that is fetched from dictionary are :" ${Array[*]}
